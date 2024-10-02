@@ -7,7 +7,8 @@ export const loadNews = (): NewsItem[] | undefined => {
       return undefined
     }
     return JSON.parse(serializedState)
-  } catch (err) {
+  } catch (e) {
+    console.log(e)
     return undefined
   }
 }
@@ -16,6 +17,6 @@ export const saveNews = (news: NewsItem[]) => {
     const serializedState = JSON.stringify(news)
     localStorage.setItem('news', serializedState)
   } catch {
-    // ignore write errors
+    console.log('not save error')
   }
 }
