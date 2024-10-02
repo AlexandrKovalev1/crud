@@ -23,7 +23,7 @@ export const EditNewsItem = ({ newsTitle, newsContent, id }: Props) => {
   return (
     <>
       <Modal
-        setOpen={setOpen}
+        onOpenChange={setOpen}
         open={open}
         trigger={
           <Button variant={'edit'} title={'Изменить новость'}>

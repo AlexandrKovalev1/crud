@@ -17,7 +17,7 @@ export const AddNewsItem = () => {
   return (
     <>
       <Modal
-        setOpen={setOpen}
+        onOpenChange={setOpen}
         open={open}
         trigger={<Button>Добавить Новость</Button>}
         content={
