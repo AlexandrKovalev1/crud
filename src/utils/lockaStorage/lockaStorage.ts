@@ -1,4 +1,3 @@
-import { RootState } from '../../services/store.ts'
 import { NewsItem } from '../../features/newsPage/model/newsSlice.ts'
 
 export const loadNews = (): NewsItem[] | undefined => {
