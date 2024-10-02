@@ -2,10 +2,20 @@
   all: unset;
   cursor: pointer;
   color: white;
-  background-color: #080;
+  text-align: center;
 
   &.add {
     padding: 5px 10px;
+    background-color: #080;
     border-radius: 5px;
+  }
+
+  &.delete {
+    padding: 5px;
+    color: black;
+
+    &:hover {
+      color: red;
+    }
   }
 }
