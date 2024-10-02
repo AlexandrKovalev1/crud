@@ -1,11 +1,16 @@
 import s from './newsPage.module.scss'
-import { Button } from '../../../components/button'
+import { NewsItem } from '../../../components/newsItem/NewsItem.tsx'
+import { AddNewsItem } from '../../../components/addNewsItem'
+import { useNews } from '../lib/useNews.ts'
 
 export const NewsPage = () => {
+  const { news } = useNews()
   return (
     <div className={s.container}>
-      <div></div>
-      <Button>Добавить новость</Button>
+      <div className={s.newsBlock}>
+        {news?.map(n => <NewsItem heading={n.title} content={n.content} key={n.id} id={n.id} />)}
+      </div>
+      <AddNewsItem />
     </div>
   )
 }
