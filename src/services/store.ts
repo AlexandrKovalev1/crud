@@ -12,7 +12,7 @@ export const store = configureStore({
 })
 
 store.subscribe(() => {
-  saveNews(store.getState())
+  saveNews(store.getState().news)
 })
 
 export const useAppDispatch = useDispatch<typeof store.dispatch>
