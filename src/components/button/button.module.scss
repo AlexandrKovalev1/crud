@@ -10,7 +10,8 @@
     border-radius: 5px;
   }
 
-  &.delete {
+  &.delete,
+  &.edit {
     padding: 5px;
     color: black;
 
