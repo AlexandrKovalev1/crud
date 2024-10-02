@@ -29,8 +29,11 @@ a:visited {
 }
 
 body {
+  user-select: none;
+
   margin: 0 auto;
   padding: 0;
+
   background-image: url('../assets/images/background.png');
   background-size: cover;
 }
