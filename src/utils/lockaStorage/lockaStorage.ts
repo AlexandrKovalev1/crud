@@ -1,6 +1,7 @@
 import { RootState } from '../../services/store.ts'
+import { NewsItem } from '../../features/newsPage/model/newsSlice.ts'
 
-export const loadState = () => {
+export const loadNews = (): NewsItem[] | undefined => {
   try {
     const serializedState = localStorage.getItem('news')
     if (serializedState === null) {
@@ -11,7 +12,7 @@ export const loadState = () => {
     return undefined
   }
 }
-export const saveState = (state: RootState) => {
+export const saveNews = (state: RootState) => {
   try {
     const serializedState = JSON.stringify(state.news)
     localStorage.setItem('news', serializedState)
