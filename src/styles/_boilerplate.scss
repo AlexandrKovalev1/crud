@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-size: 100%;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -32,4 +31,5 @@ a:visited {
 body {
   margin: 0 auto;
   padding: 0;
+  background-image: url('../assets/images/background.png');
 }
