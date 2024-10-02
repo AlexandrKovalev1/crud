@@ -1,0 +1,12 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+
+  & input {
+    all: unset;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+}
