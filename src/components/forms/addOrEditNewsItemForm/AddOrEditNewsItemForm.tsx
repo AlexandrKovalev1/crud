@@ -39,11 +39,15 @@ export const AddOrEditNewsItemForm = forwardRef<ElementRef<'form'>, Props>(
         </fieldset>
         <fieldset className={s.fieldset}>
           <TextField
+            asChild
             label={'Текст новости'}
             defaultValue={newsContent ?? ''}
             {...register('contentNews')}
             placeholder={'Напишите новость'}
-          />
+            className={s.textarea}
+          >
+            <textarea />
+          </TextField>
         </fieldset>
         <div className={s.submitWrapper}>{submitButton}</div>
         <Dialog.Close asChild>
