@@ -9,7 +9,7 @@ import { AddOrEditNewsItemForm, FormValues } from '../forms/addOrEditNewsItemFor
 export const AddNewsItem = () => {
   const [open, setOpen] = useState(false)
   const dispatch = useAppDispatch()
-  console.log(open)
+
   const onSubmit = (data: FormValues) => {
     dispatch(newsActions.addNewsItem({ title: data.titleNews, content: data.contentNews }))
       .unwrap()

@@ -24,7 +24,7 @@ const slice = createAppSlice({
         async (newsItem: Omit<NewsItem, 'id'>) => {
           const id = uuidv4()
           const res = await newsApi.addNews({ ...newsItem, id })
-          console.log(res)
+
           return { ...res }
         },
         {

@@ -19,28 +19,28 @@ export const newsApi = {
     return new Promise<NewsItem[]>(resolve => {
       setTimeout(() => {
         resolve(persistedNews || initNews)
-      }, 500)
+      }, 1000)
     })
   },
   addNews: (newsItem: NewsItem) => {
     return new Promise<NewsItem>(resolve => {
       setTimeout(() => {
         resolve(newsItem)
-      }, 500)
+      }, 1000)
     })
   },
   editNews: (data: EditNewsItem) => {
     return new Promise<EditNewsItem>(resolve => {
       setTimeout(() => {
         resolve(data)
-      }, 500)
+      }, 1000)
     })
   },
   deleteNews: (id: string) => {
     return new Promise<string>(resolve => {
       setTimeout(() => {
         resolve(id)
-      }, 500)
+      }, 1000)
     })
   },
 }
