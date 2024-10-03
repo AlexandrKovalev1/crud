@@ -17,8 +17,10 @@ export const EditNewsItem = ({ newsTitle, newsContent, id }: Props) => {
   const dispatch = useAppDispatch()
   const onSubmit = (data: FormValues) => {
     dispatch(newsActions.editNewsItem({ title: data.titleNews, content: data.contentNews, id }))
-
-    setOpen(false)
+      .unwrap()
+      .then(() => {
+        setOpen(false)
+      })
   }
   return (
     <>

@@ -6,9 +6,9 @@ type Props = {
   trigger?: ReactNode
   content?: ReactNode
 } & ComponentPropsWithoutRef<typeof Dialog.Root>
-export const Modal = ({ trigger, content }: Props) => {
+export const Modal = ({ trigger, content, ...props }: Props) => {
   return (
-    <Dialog.Root>
+    <Dialog.Root {...props}>
       {trigger && <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>}
       <Dialog.Portal>
         <Dialog.Overlay className={s.overlay} />

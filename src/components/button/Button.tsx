@@ -9,3 +9,4 @@ export const Button = forwardRef<ElementRef<'button'>, Props>(
     return <button className={finalClassName} {...props} ref={ref} />
   }
 )
+Button.displayName = 'Button'
